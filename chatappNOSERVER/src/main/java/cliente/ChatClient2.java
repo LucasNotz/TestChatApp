@@ -9,14 +9,14 @@ import java.net.UnknownHostException;
 import java.util.function.Consumer;// accepts a single input argument and returns nothing
 
 
-public class ChatClient {
+public class ChatClient2 {
     private Socket socket = null;
     private BufferedReader inputConsole = null;
     private PrintWriter out = null;
     private BufferedReader in = null;
     private Consumer<String> onMessageReceived;
     
-    public ChatClient(String serverAddress, int serverPort, Consumer<String> onMessageReceived) throws IOException {
+    public ChatClient2(String serverAddress, int serverPort, Consumer<String> onMessageReceived) throws IOException {
         this.socket = new Socket(serverAddress, serverPort);
         this.in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         this.out = new PrintWriter(socket.getOutputStream(), true);
@@ -41,7 +41,7 @@ public class ChatClient {
     }
     
     //constructor 
-    public ChatClient (String address, int port) {
+    public ChatClient2 (String address, int port) {
         try {
             socket = new Socket(address, port); //assining to socket and connecting
             //if of course serversocket.accept() creates connection
@@ -69,6 +69,6 @@ public class ChatClient {
     }
     
     public static void main(String[] args) throws IOException{
-        ChatClient client = new ChatClient("127.0.0.1", 5000);
+        ChatClient2 client = new ChatClient2("127.0.0.1", 5000);
     }
 }

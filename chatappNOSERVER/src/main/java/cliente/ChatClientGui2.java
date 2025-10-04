@@ -8,15 +8,15 @@ import java.util.Date;
 import javax.swing.*;
 
 
-public class ChatClientGui extends JFrame {
+public class ChatClientGui2 extends JFrame {
     private JTextArea messageArea;
     private JTextField textField;
-    private ChatClient client; //chatclient class to create chat client
+    private ChatClient2 client; //chatclient class to create chat client
     private JButton exitButton;
     private JPanel bottomPanel;
     
     //constructor
-    public ChatClientGui() {
+    public ChatClientGui2() {
         super("Chat Application");
         setSize(400,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -51,7 +51,7 @@ public class ChatClientGui extends JFrame {
         
         //initialize and start chat client
         try {
-            this.client = new ChatClient("127.0.0.1", 5000, this::onMessageReceived); //have to add onmessagereceived to chatclient /done
+            this.client = new ChatClient2("127.0.0.1", 5000, this::onMessageReceived); //have to add onmessagereceived to chatclient /done
             client.startClient(); //have to add start client /done
         } catch (IOException e) {
             e.printStackTrace();
