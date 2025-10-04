@@ -1,1 +1,6 @@
+server/ClientHandler.class
 com/daintree/javachatapp/Chatapp.class
+cliente/ChatClientGui$1.class
+server/ChatServer.class
+cliente/ChatClient.class
+cliente/ChatClientGui.class
